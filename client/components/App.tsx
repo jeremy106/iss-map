@@ -1,8 +1,8 @@
 function App() {
   return (
     <div>
-      <h1>App</h1>
-      <p>React development has begun!</p>
+      <h1>ISS Point of View</h1>
+      <p>Development Underway</p>
     </div>
   )
 }
