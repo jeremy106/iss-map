@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getCoordinates, Satelite } from "../apiClients"
 import "leaflet/dist/leaflet.css"
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
+import { map } from "leaflet"
 
 
 
@@ -26,13 +27,17 @@ function App() {
       }
       
       update()
-
+      
     }, 2000)
+    console.log("beep")
 
     return () => clearInterval(interval)
       
   }, [])
   
+
+
+
   if (error) {
     return <>Something went wrong: {error}</>
   }
@@ -52,8 +57,9 @@ function App() {
     </p>
     <MapContainer center={[satelite.latitude, satelite.longitude]} zoom={5}>
       <TileLayer 
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; NASA Blue Marble'
+        url="http://s3.amazonaws.com/com.modestmaps.bluemarble/{z}-r{y}-c{x}.jpg"
+        maxNativeZoom={8}
       />
       <Marker position={[satelite.latitude, satelite.longitude]} ></Marker>
     </MapContainer>
