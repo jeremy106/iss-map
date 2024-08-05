@@ -22,6 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "@devacademy/eslint-config": "^1.10.1",
+    "@types/leaflet": "^1.9.12",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -50,6 +51,8 @@
   },
   "browserslist": "> 2%, not dead",
   "dependencies": {
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1",
     "superagent": "^9.0.2"
   }
 }

@@ -3,3 +3,7 @@ body {
   color: #dadada;
   font-family: 'Poppins', sans-serif;
 }
+
+.leaflet-container { 
+  height: 50vw;
+}
