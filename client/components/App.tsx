@@ -2,10 +2,6 @@ import { useEffect, useState } from "react"
 import { getCoordinates, Satelite } from "../apiClients"
 import "leaflet/dist/leaflet.css"
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
-import { map } from "leaflet"
-
-
-
 
 function App() {
 
